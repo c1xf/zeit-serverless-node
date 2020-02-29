@@ -1,0 +1,23 @@
+{
+  "name": "zeit-serverless-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sssylvan/zeit-serverless-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sssylvan/zeit-serverless-node/issues"
+  },
+  "homepage": "https://github.com/sssylvan/zeit-serverless-node#readme",
+  "devDependencies": {
+    "@now/node": "^1.4.1"
+  }
+}
