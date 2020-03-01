@@ -17,5 +17,5 @@ export default (request: NowRequest, response: NowResponse) => {
     },
     json: true
   };
-  rp(options).then(rst => response.json(rst));
+  rp(options).then(_ => response.json(request));
 };
