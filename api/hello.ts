@@ -12,7 +12,7 @@ export default (request: NowRequest, response: NowResponse) => {
     body: {
       msgtype: "markdown",
       markdown: {
-        content: `hello sentry ${new Date()},${JSON.stringify(data)}`
+        content: `hello sentry ${new Date()},${JSON.stringify(request)}`
       }
     },
     json: true
