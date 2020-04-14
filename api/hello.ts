@@ -12,10 +12,10 @@ export default (request: NowRequest, response: NowResponse) => {
     body: {
       msgtype: "markdown",
       markdown: {
-        content: `hello sentry ${new Date()},${JSON.stringify(request)}`
+        content: `hello sentry ${new Date()},${data}`
       }
     },
     json: true
   };
-  rp(options).then(_ => response.json(request));
+  rp(options).then(_ => response.status(200).send(`Hello!`));
 };
