@@ -12,8 +12,7 @@ export default (request: NowRequest, response: NowResponse) => {
     body: {
       msgtype: "markdown",
       markdown: {
-        content: `hello sentry ${new Date()}
-        [查看详情](${data.url})`
+        content: `hello sentry ${new Date()}`
       }
     },
     json: true
