@@ -2,7 +2,7 @@ import { NowRequest, NowResponse } from "@now/node";
 const rp = require("request-promise");
 
 const workWeChatHooks =
-  "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=e552904d-e6aa-4ed9-9bc9-5d3d5c3fc5de";
+  "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=181322e6-9f07-43dc-add2-2db5aed6281b";
 
 export default (request: NowRequest, response: NowResponse) => {
   const data = request.body
