@@ -8,10 +8,10 @@ export default (request: NowRequest, response: NowResponse) => {
   const data = request.body
   console.log(data)
   const { project = '', url = '', event = { request: {} } } = { ...data }
-  const content = `${event.title}
-     Project：${project}
-     url：${url}
-     origin：${event.request.url}`
+  const content = `<font color=\"warning\">${event.title}</font>
+     Project：<font color=\"info\">${project}</font>
+     url：<font color=\"info\">${url}</font>
+     origin：<font color=\"info\">${event.request.url}</font>`
 
   const options = {
     method: 'POST',
