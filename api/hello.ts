@@ -10,7 +10,7 @@ export default (request: NowRequest, response: NowResponse) => {
   const { project = '', url = '', event = { request: {} } } = { ...data }
   const content = `<font color=\"warning\">${event.title}</font>
      Project：<font color=\"info\">${project}</font>
-     url：<font color=\"info\">${url}</font>
+     url：[${url}](${url})
      origin：<font color=\"info\">${event.request.url}</font>`
 
   const options = {
