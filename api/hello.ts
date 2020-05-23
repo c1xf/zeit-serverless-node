@@ -7,13 +7,17 @@ const workWeChatHooks =
 export default (request: NowRequest, response: NowResponse) => {
   const data = request.body
   console.log(data)
+  const {project,url,event}={...data}
   const options = {
     method: "POST",
     uri: workWeChatHooks,
     body: {
       msgtype: "markdown",
       markdown: {
-        content: `hello sentry ${new Date()},${data}`
+        "content": `<font color=\"warning\">${event?.title}</font>\n
+         >Project:<font color=\"info\">${project}</font>
+         >url:<font color=\"info\">${url}</font>
+         >来源:<font color=\"info\">${event?.request.url}</font>`
       }
     },
     json: true
