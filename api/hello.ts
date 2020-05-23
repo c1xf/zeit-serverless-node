@@ -6,6 +6,7 @@ const workWeChatHooks =
 
 export default (request: NowRequest, response: NowResponse) => {
   const data = request.body
+  console.log(data)
   const options = {
     method: "POST",
     uri: workWeChatHooks,
@@ -17,5 +18,5 @@ export default (request: NowRequest, response: NowResponse) => {
     },
     json: true
   };
-  rp(options).then(_ => response.status(200).send(`Hello!`));
+  rp(options).then(_ => response.status(200).send(data));
 };
