@@ -14,10 +14,10 @@ export default (request: NowRequest, response: NowResponse) => {
     body: {
       msgtype: "markdown",
       markdown: {
-        "content": `<font color=\"warning\">${event?.title}</font>\n
-         >Project:<font color=\"info\">${project}</font>
-         >url:<font color=\"info\">${url}</font>
-         >来源:<font color=\"info\">${event?.request.url}</font>`
+        content: `${event?.title}
+         Project：${project}
+         url：${url}
+         origin：${event?.request.url}`
       }
     },
     json: true
