@@ -7,19 +7,20 @@ const workWeChatHooks =
 export default (request: NowRequest, response: NowResponse) => {
   const data = request.body
   console.log(data)
-  const { project = '', url = '', event = null } = { ...data }
-  const content = `${event?.title}
-    Project：${project}
-    url：${url}
-    origin：${event?.request.url}`
-  
+  const { project = '', url = '', event = { request: {} } } = { ...data }
+  const content = `${event.title}
+     Project：${project}
+     url：${url}
+     origin：${event.request.url}`
+
   const options = {
     method: 'POST',
     uri: workWeChatHooks,
     body: {
       msgtype: 'markdown',
       markdown: {
-        content
+        content,
+      },
     },
     json: true,
   }
